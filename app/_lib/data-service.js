@@ -48,10 +48,10 @@ export const getCabins = async function () {
 
   if (error) {
     console.error(error);
-    throw new Error("Cabins could not be loaded");
+    // throw new Error("Cabins could not be loaded");
   }
-
-  return data;
+  const result = data || [];
+  return result;
 };
 
 // Guests are uniquely identified by their email address
